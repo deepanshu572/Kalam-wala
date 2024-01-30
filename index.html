@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <style>
+        *{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+p{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    padding: 58px 111px;
+}
+
+.head h2{
+    text-align: center;
+}
+.imges-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.imges-head img{
+    width: 35vw;
+}
+.btn-link {
+    color: black !important;
+    width: 100%;
+    text-align: start;
+    height: 100%;
+
+}
+.card-header{
+    border: 1px solid #797979;
+    background: #fff;
+}
+.card-header::after{
+    content: ">";
+    transform: rotate(89deg);
+    font-weight: 800;
+    font-size: 18px;
+    
+}
+/* .card-header::after:hover{
+    transform: rotate(130deg);
+    
+} */
+.card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-body-flex{
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card-body-flex .input{
+    all: unset;
+    border: 1px solid #868686;
+    padding: 16px 11px;
+    width: 51vw;
+    font-size: 16px;
+    border-radius: 6px;
+}
+.card-body-flex .button{
+    background: black;
+    color: #fff;
+    padding: 9px 83px;
+    border-radius: 7px;
+    border: none;
+}
+.accordation{
+    padding: 10px 8rem;
+}
+
+.input-field{
+    position: relative;
+    }
+    .input-field input{
+    }
+    .input-field label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 13px;
+    pointer-events: none;
+    transition: 0.3s;
+    }
+    input:focus{
+    /* border: 2px solid #000000; */
+    }
+    input:focus ~ label,
+    input:valid ~ label{
+    top: 0;
+    left: 15px;
+    font-size: 11px;
+    padding: 0 2px;
+    background: #ffffff;
+    /* color: black; */
+    }
+.box-otp input{
+    height: 32px;
+    width: 37px;
+
+    text-align: center;
+
+}
+.box-otp{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+.card-body-flex span{
+    padding: 4px 8px;
+    background: #666666;
+    color: #fff;
+    font-weight: 700;
+    font-size: 10px;
+    border-radius: 4px;
+}
+.box-text{
+    box-shadow: 1px 1px 10px #cecdcd;
+    padding: 15px;
+    border-radius: 7px;
+    width: 29vw;
+
+}
+.box-text p{
+    padding-bottom: 10px;
+}
+.button-text {
+    display: flex;
+    gap: 25px;
+}
+.button-text button{
+    padding: 4px 53px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+.button-text .button1{
+    background: #0fa4e1;
+}
+.button-text .button2{
+    background: #f81238;
+}
+.star{
+    display: flex;
+    align-items: center;
+    gap: 356px;
+}
+.star-wala i{
+    font-size: 23px;
+    color: gold;
+    text-shadow: 2px 2px 2px black;
+}
+.button3{
+    padding: 7px 53px !important;
+    background-color: black;
+}
+.button4{
+    padding: 7px 53px !important;
+    background-color: rgb(202, 29, 29);
+}
+.card-body-flex select{
+    height: 53px;
+    width: 53vw;
+    padding: 14px;
+}
+.same-button{
+    background: #fff;
+    border: none;
+    box-shadow: 1px 1px 8px #bfbfbf;
+    width: 53vw;
+    height: 49px;
+    border-radius: 5px;
+    outline: none;
+}
+.card-body-flex small{
+    width: 100%;
+    padding-left: 160px;
+}
+.input-field1 input{
+    height: 178px;
+}
+.input-field1 label {
+    top: 10%;
+}
+.disabled-button {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+    color: black;
+    border: none;
+    background: #fff;
+    font-size: 14px;
+  }
+  .input-update{
+    height: 178px;
+  }
+    </style>
+</head>
+<body>
+    
+    <div class='main'>
+        <div class="head">
+        <h2>Kalam ticket support</h2>
+  
+        </div>
+          <div class="imges-head">
+               <img src="./img/pic1.png" alt="" />
+               <img src="./img/pic2.png" alt="" />
+          </div>
+    <div id="accordion">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link" id='add1'  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Ticket Support
+          </button>
+        </h5>
+      </div>
+  
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body card-body-flex ">
+        <div class="input-field">   
+          <input  class='input'  type="text"  required spellcheck='false' />
+          <label>Mobile no or Email ID</label>
+          </div>
+            <button  class='button' onclick="generateOTP()">Genrate OTP</button>
+       </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button id='add2' class="btn btn-link  collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Ticket Support
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body card-body-flex">
+        <div class="input-field">   
+          <input class='input' type="text"  required spellcheck='false' />
+          <label>Mobile no or Email ID</label>
+          </div>
+          <div class="box-otp">
+                <input type="number" />
+                <input type="number" />
+                <input type="number" />
+                <input type="number" />
+          </div>
+          <p> OTP sent in 1:00 min</p>
+          <span>Resend OTP</span>
+  
+          <button class='button' onclick="Tickets()">Raise Ticket</button>
+  
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+          <button class="btn btn-link  collapsed" id='add3' data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Collapsible Group Item #3
+          </button>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body card-body-flex">
+          <div class="box-text">
+             <p> <b> Name: </b> Ankit Kumar </p>
+               <p> <b> Email ID: </b> ankirdk@gnhm.com </p>
+               <p> <b> Mobile No.: </b> 0987654321 </p>
+               <p> <b> Project: </b> Grocery </p>
+          </div>
+          <div class="button-text">
+            <button class='button1'  onclick="Support()">Support</button>
+            <button class='button2'  onclick="Complaint()">Complaint</button>
+          </div>
+              
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingFour">
+        <h5 class="mb-0">
+          <button class="btn btn-link  collapsed" id='add4' data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+          Feeling stuck? Don’t worry, we’re here to help! Just let us know what you need.
+          </button>
+        </h5>
+      </div>
+      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+        <div class="card-body card-body-flex">
+          <select>
+              <option value="A"> A</option>
+              <option value="H">Hello</option>
+              <option value="H">Hello</option>
+              <option value="H">Hello</option>
+              <option value="H">Hello</option>
+          </select> 
+          <small>Upload your screenshot or image.</small>
+          <button  class='same-button'>File Upload</button>
+          
+          <div class="input-field input-field1">   
+          <input class='input input-update' type="text"  required spellcheck='false' />
+          <label>Write your complaint</label>
+          </div>
+          <div class="star">
+            <p>Rate your experience</p>
+            <div class='star-wala'>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            </div>
+           
+          </div> <div class="button-text">
+            <button class='button3'>Raise Ticket</button>
+            <button class='button4'>Let’s talk on the phone</button>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingFive">
+        <h5 class="mb-0">
+          <button class="btn btn-link  collapsed" id='add5' data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+          Having trouble with our service? Let us know, we’re here to help.
+          </button>
+        </h5>
+      </div>
+      <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+        <div class="card-body card-body-flex">
+          <select>
+              <option value="A"> A</option>
+              <option value="H">Hello</option>
+              <option value="H">Hello</option>
+              <option value="H">Hello</option>
+              <option value="H">Hello</option>
+          </select> 
+          <small>Upload your screenshot or image.</small>
+          <button class='same-button'>File Upload</button>
+          
+          <div class="input-field input-field1">   
+          <input class='input' type="text"  required spellcheck='false' />
+          <label>Write your complaint</label>
+          </div>
+          <div class="star">
+            <p>Rate your experience</p>
+            <div class='star-wala'>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            </div>
+           
+          </div> <div class="button-text">
+            <button class='button3'>Raise Ticket</button>
+            <button class='button4'>Let’s talk on the phone</button>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+      </div>
+    <script>
+         function generateOTP(){
+     window.localStorage.setItem( "setOtp" , "otpSent" )
+      var a = window.localStorage.getItem("setOtp");
+     if( a ==  "otpSent"){
+
+      /////add class/////
+     var FirstAccordation = document.getElementById("collapseOne");
+     FirstAccordation.setAttribute("class", "collapse" );
+     console.log(FirstAccordation);
+
+       /////disabled////
+     var FirstButton = document.getElementById("add1");
+     FirstButton.setAttribute("class", "disabled-button" );
+     console.log(FirstButton);
+
+     /////add class/////
+     var SecondAccordation = document.getElementById("collapseTwo");
+     SecondAccordation.setAttribute("class", "collapse show");
+     }
+    }
+     
+  function Tickets(){
+     window.localStorage.setItem( "setOtp" , "otpSent" )
+      var a = window.localStorage.getItem("setOtp");
+     if( a ==  "otpSent"){
+     
+      /////add class/////
+      var SecondAccordation = document.getElementById("collapseTwo");
+      SecondAccordation.setAttribute("class", "collapse" );
+      console.log(SecondAccordation);
+ 
+        /////disabled////
+      var SecondButton = document.getElementById("add2");
+      SecondButton.setAttribute("class", "disabled-button" );
+      console.log(SecondButton);
+ 
+      /////add class/////
+      var ThirdAccordation = document.getElementById("collapseThree");
+      ThirdAccordation.setAttribute("class", "collapse show");
+
+      }
+
+  }
+
+  function Support(){
+    window.localStorage.setItem( "setOtp" , "otpSent" )
+    var a = window.localStorage.getItem("setOtp");
+   if( a ==  "otpSent"){
+   
+    /////add class/////
+    var ThirdAccordation = document.getElementById("collapseThree");
+    ThirdAccordation.setAttribute("class", "collapse" );
+    console.log(ThirdAccordation);
+
+      /////disabled////
+    var SecondButton = document.getElementById("add3");
+    SecondButton.setAttribute("class", "disabled-button" );
+    console.log(SecondButton);
+      /////disabled////
+    var FiveButton = document.getElementById("add5");
+    FiveButton.setAttribute("class", "disabled-button" );
+    console.log(FiveButton);
+
+    /////add class/////
+    var FouthAccordation = document.getElementById("collapseFour");
+    FouthAccordation.setAttribute("class", "collapse show");
+
+    }
+  }
+  function Complaint(){
+    window.localStorage.setItem( "setOtp" , "otpSent" )
+    var a = window.localStorage.getItem("setOtp");
+   if( a ==  "otpSent"){
+   
+    /////add class/////
+    var ThirdAccordation = document.getElementById("collapseThree");
+    ThirdAccordation.setAttribute("class", "collapse" );
+    console.log(ThirdAccordation);
+
+      /////disabled////
+    var SecondButton = document.getElementById("add3");
+    SecondButton.setAttribute("class", "disabled-button" );
+    console.log(SecondButton);
+
+      /////disabled////
+    var FourButton = document.getElementById("add4");
+    FourButton.setAttribute("class", "disabled-button" );
+    console.log(FourButton);
+
+    /////add class/////
+    var FifthAccordation = document.getElementById("collapseFive");
+    FifthAccordation.setAttribute("class", "collapse show");
+
+    }
+  }
+    </script>
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+</body>
+</html>
